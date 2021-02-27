@@ -3,20 +3,20 @@ var timeAndDateEl = $('#clock')
 var  saveButtonEl = $('.saveButton')
 
 
-
+//function for the live clock
 function showTime() {
   var currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
   timeAndDateEl.text(currentTime);
 }
 setInterval(showTime, 1000);
-
+//operates the save button
 saveButtonEl.on("click", function() {
     var input = $(this).siblings("textarea").val();
     var storedInputs = $(this).parent().attr("id");
     localStorage.setItem("storedInputs", JSON.stringify(input));
   }
 );
-
+//Retrives the inputs
 $("#9 textarea").val(JSON.parse(localStorage.getItem('input')));
 $("#10 textarea").val(JSON.parse(localStorage.getItem('input')));
 $("#11").val(JSON.parse(localStorage.getItem('input')));
@@ -29,27 +29,9 @@ $("#17").val(JSON.parse(localStorage.getItem('input')));
 
 
 
-// $('.col-md-10 description').each(function())
-// {
-//   var plannerHour = parseInt($(this).attr('id'))
-// }
 
-// $('.col-md-10 description').each(function())
-// {
-//   var plannerHour = parseInt($(this).attr('id'))
-// }
 
-// $('.col-md-10').each(function(){
-//     var val = parseInt($(this).prop('id'));
-//     if(val > currentHour && val < currentHour+6){
-//         $(this).css('background-color','Blue');
-//     }else if(val < currentHour && val > currentHour-6){
-//         $(this).css('background-color','Red');
-//     }else if(val === currentHour){
-//         $(this).css('background-color','Green');
-//     };
-// })
-
+//This block parses the value of the id which is numbered after the hour, and converts them to an object. Then value checks that against the hour in moment and then assigns the block the correct color.
 var currentTime = moment().format("H");
 $(".col-md-10").each(function () {
   var val = parseInt($(this).attr("id"));
