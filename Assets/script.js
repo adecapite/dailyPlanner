@@ -1,7 +1,7 @@
 var jumboTron = document.getElementById("jumbotron")
 var timeAndDateEl = $('#clock')
 var  saveButtonEl = $('.saveButton')
-var currentHour = moment().format('H')
+
 
 
 function showTime() {
@@ -39,13 +39,26 @@ $("#17").val(JSON.parse(localStorage.getItem('input')));
 //   var plannerHour = parseInt($(this).attr('id'))
 // }
 
-$('.col-md-10').each(function(){
-    var val = parseInt($(this).prop('id'));
-    if(val > currentHour && val < currentHour+6){
-        $(this).css('background-color','Blue');
-    }else if(val < currentHour && val > currentHour-6){
-        $(this).css('background-color','Red');
-    }else if(val === currentHour){
-        $(this).css('background-color','Green');
-    };
-})
+// $('.col-md-10').each(function(){
+//     var val = parseInt($(this).prop('id'));
+//     if(val > currentHour && val < currentHour+6){
+//         $(this).css('background-color','Blue');
+//     }else if(val < currentHour && val > currentHour-6){
+//         $(this).css('background-color','Red');
+//     }else if(val === currentHour){
+//         $(this).css('background-color','Green');
+//     };
+// })
+
+var currentTime = moment().format("H");
+$(".col-md-10").each(function () {
+  var val = parseInt($(this).attr("id"));
+  if (val == currentTime) {
+    $(this).css("background-color", "Red");
+  }else if (val < currentTime) {
+    $(this).css("background-color", "lightgray");
+  } else if (val > currentTime) {
+    $(this).css("background-color", "Green");
+  } 
+  }
+);
