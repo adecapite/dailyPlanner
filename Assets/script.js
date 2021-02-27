@@ -17,8 +17,8 @@ saveButtonEl.on("click", function() {
   }
 );
 //Retrives the inputs
-$("#9 textarea").val(JSON.parse(localStorage.getItem('input')));
-$("#10 textarea").val(JSON.parse(localStorage.getItem('input')));
+$("#9").val(JSON.parse(localStorage.getItem('input')));
+$("#10").val(JSON.parse(localStorage.getItem('input')));
 $("#11").val(JSON.parse(localStorage.getItem('input')));
 $("#12").val(JSON.parse(localStorage.getItem('input')));
 $("#13").val(JSON.parse(localStorage.getItem('input')));
