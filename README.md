@@ -12,5 +12,6 @@ One feature is the live clock.
 using the moment function it pulls a real time clock including the seconds.
 
 Also, the calendar has a color coding feature.
-![alt text](assests/images/blocks)
+<img width="1249" alt="blocks" src="https://user-images.githubusercontent.com/77472956/118744374-428f0480-b822-11eb-82e5-3be6960026be.png">
+
 Gray for past, red for present and green for future.
