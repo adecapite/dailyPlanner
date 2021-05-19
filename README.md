@@ -5,7 +5,9 @@ Anthony DeCapite's Daily PLanner
 The daily planner allows for you to save events from the work day to call upon later.
 
 One feature is the live clock.
-![alt text] <img width="1683" alt="Screen Shot 2021-04-17 at 1 49 56 PM" src="https://user-images.githubusercontent.com/77472956/118744270-03f94a00-b822-11eb-983d-771eb3663e2f.png">
+
+<img width="1255" alt="clock" src="https://user-images.githubusercontent.com/77472956/118744326-2be8ad80-b822-11eb-9dde-c0ed6de87632.png">
+
 
 using the moment function it pulls a real time clock including the seconds.
 
